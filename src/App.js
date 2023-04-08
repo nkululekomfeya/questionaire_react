@@ -10,7 +10,18 @@ function App() {
   const [selectedOption, setSelectedOption] = React.useState('option1');
   const [show, setShow]=React.useState(false)
 
-  
+  const [checkedValues, setCheckedValues] = React.useState([]);
+
+  const handleCheckboxChange = (event) => {
+    const value = event.target.value;
+    const isChecked = event.target.checked;
+    if (isChecked) {
+      setCheckedValues([...checkedValues, value]);
+    } else {
+      setCheckedValues(checkedValues.filter((v) => v !== value));
+    }
+    console.log(checkedValues)
+  };
 
 
   function handleOptionChange(event) {
@@ -20,11 +31,19 @@ function App() {
 
   const handleInputChange = (event) => {
     const { id, value } = event.target;
+    const isChecked = event.target.checked
+    if (isChecked) {
+      setCheckedValues([...checkedValues, value]);
+    } else {
+      setCheckedValues(checkedValues.filter((v) => v !== value));
+    }
     setResponses((prevResponses) => ({
       ...prevResponses,
       [id]: value,
+      [checkedValues.id]:value
     }));
     console.log(otherOption)
+    
   };
 
   const handleOtherInputChange = (event) => {
@@ -34,7 +53,7 @@ function App() {
   const handleSubmit = (event) => {
      
     event.preventDefault();
-    
+    console.log(checkedValues)
     console.log(selectedOption);
   };
 
@@ -96,6 +115,71 @@ function App() {
               <input type="text" id="other" onChange={handleInputChange}/>
           </div>
           )}
+
+      <div className="box">
+      <label>
+        <h2>When do you shop for children’s clothing? (check all that apply)</h2>
+        <input
+          type="checkbox"
+          value="option1"
+          id="option1"
+          checked={checkedValues.includes('option1')}
+          onChange={handleInputChange}
+        />
+        When my child finds something he/she likes
+      </label>
+      <br/>
+      <label>
+
+        <input
+          type="checkbox"
+          value="option2"
+          id="option2"
+          checked={checkedValues.includes('option2')}
+          onChange={handleInputChange}
+        />
+        When clothes show signs of wear
+      </label>
+      <br/>
+      <label>
+        <input
+          type="checkbox"
+          value="option3"
+          id="option3"
+          checked={checkedValues.includes('option3')}
+          onChange={handleInputChange}
+        />
+        
+        When kids out grow their old clothes
+      </label>
+      <br/>
+      <label>
+        <input
+          type="checkbox"
+          value="option4"
+          id="option4"
+          checked={checkedValues.includes('option4')}
+          onChange={handleInputChange}
+        />
+        
+        Seasonal Sale/Holidays
+
+      </label>
+      <br/>
+      <label>
+        <input
+          type="checkbox"
+          value="option5"
+          id="option5"
+          checked={checkedValues.includes('option5')}
+          onChange={handleInputChange}
+        />
+        
+        When Required
+      </label>
+    </div>
+
+
       <div> 
         <div className="box">
         <h2>Name childrens top three favourite brands</h2>

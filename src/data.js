@@ -38,19 +38,6 @@ export default{
                 ] 
             },
             {
-                "id": 4,
-                "item": "When do you shop for children’s clothing? (check all that apply)",
-                "options":[
-                    "When my child finds something he/she likes",
-                    "When clothes show signs of wear", 
-                    "When kids out grow their old clothes", 
-                    "Seasonal Sale/Holidays", 
-                    "When Required",
-                    
-
-                ] 
-            },
-            {
                 "id": 5,
                 "item": "How often do your children choose their clothes?",
                 "options":[

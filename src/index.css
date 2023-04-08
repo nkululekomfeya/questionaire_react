@@ -1,3 +1,10 @@
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+@-ms-viewport {
+  width: device-width ;
+}
 body {
   background-color: #EEF2F7;
   font-family: monospace;
@@ -54,12 +61,13 @@ button {
   font-family: inherit;
   font-size: 21px;
   display: block;
-  width: 100%;
+  width: 50%;
   margin-top: 50px;
   margin-bottom: 20px;
 }
 
 .box {
+  word-wrap: break-word;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -72,17 +80,26 @@ button {
   
   
   min-height: 200px;
-  width: 50vw;
+  width: 90vw;
   margin: 100px auto;
   background: white;
   border-radius: 5px;
 }
 
+@media (min-width: 600px) {
+  .box {
+    width: 50%;
+  }
+}
+
 input{
+  width: auto;
   margin-top: 20px;
   border-radius: 6px;
 }
 
-option{
-  padding-top: 20px;
+label, option{
+  padding-bottom: 40px;
+  overflow:hidden;
 }
+
