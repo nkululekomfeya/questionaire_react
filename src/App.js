@@ -210,6 +210,7 @@ function App() {
         <option id="option2" value="Somewhat Important" >Somewhat Important</option>
         <option id="option3" value="Important" >Important</option>
       </select>
+      <p></p>
       <br/>
       <label id="Fabric"htmlFor="dropdown">Fabric Quality/Reliability</label>
       <select id="Fabric" defaultValue="" onChange={handleInputChange}>
@@ -218,6 +219,7 @@ function App() {
         <option value="Somewhat Important" >Somewhat Important</option>
         <option value="Important" >Important</option>
       </select>
+      <p></p>
       <br/>
       <label id="Brand"htmlFor="dropdown">Brand</label>
       <select id="Brand" defaultValue="" onChange={handleInputChange}>
@@ -226,6 +228,7 @@ function App() {
         <option value="Somewhat Important" >Somewhat Important</option>
         <option value="Important" >Important</option>
       </select>
+      <p></p>
       <br/>
       <label id="Comfort"htmlFor="dropdown">Comfort</label>
       <select id="Comfort" defaultValue="" onChange={handleInputChange}>
@@ -234,6 +237,7 @@ function App() {
         <option value="Somewhat Important" >Somewhat Important</option>
         <option value="Important">Important</option>
       </select>
+      <p></p>
       <br/>
       <label id="Pattern"htmlFor="dropdown">Pattern/Design</label>
       <select id="Pattern" defaultValue="" onChange={handleInputChange}>
@@ -242,6 +246,8 @@ function App() {
         <option value="Somewhat Important" >Somewhat Important</option>
         <option value="Important" >Important</option>
       </select>
+      <p></p>
+        <br/>
         </div>
 
 
@@ -250,13 +256,14 @@ function App() {
         <h2>Rank where do you buy children clothing more often? (1 - Most often, 5 - least often)</h2>
         <label id="Designer" htmlFor="dropdown">Designer/Speciality Stores</label>
         <select id="Designer" defaultValue="" onChange={handleInputChange}>
-        <option disabled value=''>Select an option</option>
+        <option id="list"disabled value=''>Select an option</option>
         <option id="1" value="1">1</option>
         <option id="2" value="2">2</option>
         <option id="3" value="3">3</option>
         <option id="4" value="4" >4</option>
         <option id="5" value="5" >5</option>
         </select>
+        <p></p>
         <br/>
         <label id="Stores" htmlFor="dropdown">Department Stores (Walmart, Target etc)</label>
         <select id="Stores" defaultValue="" onChange={handleInputChange}>
@@ -267,6 +274,7 @@ function App() {
         <option id="4" value="4" >4</option>
         <option id="5" value="5" >5</option>
         </select>
+        <p></p>
         <br/>
         <label id="Online" htmlFor="dropdown">Online</label>
         <select id="Online" defaultValue="" onChange={handleInputChange}>
@@ -277,6 +285,7 @@ function App() {
         <option id="4" value="4" >4</option>
         <option id="5" value="5" >5</option>
         </select>
+        <p></p>
         <br/>
         <label id="Brand" htmlFor="dropdown">Malls/Brand stores</label>
         <select id="Brand" defaultValue="" onChange={handleInputChange}>
@@ -287,6 +296,7 @@ function App() {
         <option id="4" value="4">4</option>
         <option id="5" value="5">5</option>
         </select>
+        <p></p>
         <br/>
         <label id="Factory" htmlFor="dropdown">Factory Outlets</label>
         <select id="Factory" defaultValue="" onChange={handleInputChange}>
@@ -297,7 +307,8 @@ function App() {
         <option id="4" value="4" >4</option>
         <option id="5" value="5" >5</option>
         </select>
-
+        <p></p>
+        <br/>
       </div>
       
       <br/>
